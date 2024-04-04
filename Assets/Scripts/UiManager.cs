@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class UiManager : MonoBehaviour
 {
+    [SerializeField] GameManager gameManager;
     [SerializeField] GameObject gameName;
     [SerializeField] GameObject gameOver;
     [SerializeField] GameObject playButton;
-    void Awake()
-    {
-        gameName.SetActive(false);
-
-    }
-
     public void StartGame()
     {
         gameName.SetActive(true);
@@ -23,5 +18,10 @@ public class UiManager : MonoBehaviour
         gameName.SetActive(false);
         gameOver.SetActive(false);
         playButton.SetActive(false);
+    }
+
+    public void StartButton()
+    {
+        gameManager.StartGame();
     }
 }

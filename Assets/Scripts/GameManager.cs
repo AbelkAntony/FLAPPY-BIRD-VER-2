@@ -20,4 +20,9 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    public void StartGame()
+    {
+        Time.timeScale = 1;
+    }
 }
