@@ -23,5 +23,6 @@ public class UiManager : MonoBehaviour
     public void StartButton()
     {
         gameManager.StartGame();
+        Default();
     }
 }

@@ -5,12 +5,7 @@ using UnityEngine;
 public class BackgroundMovement : MonoBehaviour
 {
     [SerializeField] float speed;
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+   
     void Update()
     {
         if(transform.position.x <= -9)
