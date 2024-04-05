@@ -537,6 +537,37 @@ MonoBehaviour:
   gameName: {fileID: 1925688250}
   gameOver: {fileID: 350705282}
   playButton: {fileID: 347109843}
+--- !u!1 &657773519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 657773520}
+  m_Layer: 0
+  m_Name: Pipe Spwanner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &657773520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657773519}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &745081754
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e17c3ea21349549b511876099d8196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force: 3
 --- !u!1 &788148786
 GameObject:
   m_ObjectHideFlags: 0
