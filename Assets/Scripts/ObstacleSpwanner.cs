@@ -6,6 +6,7 @@ public class ObstacleSpwanner : MonoBehaviour
 {
     [SerializeField] GameObject pipe;
     [SerializeField] float timeIntervel;
+    private float spawnPosition;
 
     private float timer;
 

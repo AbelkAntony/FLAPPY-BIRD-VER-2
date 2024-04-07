@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BirdMovement : MonoBehaviour
 {
+    [SerializeField] GameManager gameManager;
     public float force;
     private Rigidbody2D rb;
 
