@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UiManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class UiManager : MonoBehaviour
     [SerializeField] GameObject gameName;
     [SerializeField] GameObject gameOver;
     [SerializeField] GameObject playButton;
+    [SerializeField] TMP_Text score;
+    [SerializeField] GameObject scoreText;
     public void StartWindow()
     {
         gameName.SetActive(true);
@@ -30,5 +33,11 @@ public class UiManager : MonoBehaviour
     {
         gameOver.SetActive(true);
         playButton.SetActive(true);
+    }
+
+    public void UpdateScore(int point)
+    {
+        Debug.Log(point);
+        score.text = point.ToString(); 
     }
 }

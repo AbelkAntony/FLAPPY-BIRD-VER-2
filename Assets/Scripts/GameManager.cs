@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject bird;
     [SerializeField] ObstacleSpwanner obstacleSpawner;
     [SerializeField] UiManager uiManager;
+    private int score;
+    private int scoremultiplier = 1;
     private void Awake()
     {
         Time.timeScale = 0;
@@ -26,9 +28,12 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        
         Time.timeScale = 1;
         bird.SetActive(true);
         obstacleSpawner.GameOver(false);
+        score = 0;
+        uiManager.UpdateScore(score);
     }
 
     public void GameOver()
@@ -37,5 +42,12 @@ public class GameManager : MonoBehaviour
         obstacleSpawner.GameOver(true);
         bird.gameObject.SetActive(false);
         uiManager.GameOver();
+    }
+
+    public void AddScore()
+    {
+        score += scoremultiplier;
+        //Debug.Log(score);
+        uiManager.UpdateScore(score);
     }
 }

@@ -29,5 +29,16 @@ public class BirdMovement : MonoBehaviour
             Debug.Log(collision.gameObject.tag);
             
         }
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        
+        if (collision.gameObject.tag == "scoreCalculator")
+        {
+            gameManager.AddScore();
+            //Debug.Log(collision.gameObject.tag);
+        }
     }
 }
