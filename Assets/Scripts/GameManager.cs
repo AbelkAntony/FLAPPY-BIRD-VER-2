@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] GameObject bird;
+    [SerializeField] BirdMovement bird;
     [SerializeField] ObstacleSpwanner obstacleSpawner;
     [SerializeField] UiManager uiManager;
     private int score;
@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 0;
-        bird.SetActive(false);
+        bird.gameObject.SetActive(false);
     }
     // Start is called before the first frame update
     void Start()
@@ -28,9 +28,9 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        
+        bird.ResetPosition();
         Time.timeScale = 1;
-        bird.SetActive(true);
+        bird.gameObject.SetActive(true);
         obstacleSpawner.GameOver(false);
         score = 0;
         uiManager.UpdateScore(score);

@@ -41,4 +41,9 @@ public class BirdMovement : MonoBehaviour
             //Debug.Log(collision.gameObject.tag);
         }
     }
+
+    public void ResetPosition()
+    {
+        this.gameObject.transform.position = new Vector3(0, 0, 0);
+    }
 }
