@@ -19,4 +19,15 @@ public class BirdMovement : MonoBehaviour
             rb.velocity = Vector2.up * force;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "pipe")
+        {
+            gameManager.GameOver();
+            
+            Debug.Log(collision.gameObject.tag);
+            
+        }
+    }
 }

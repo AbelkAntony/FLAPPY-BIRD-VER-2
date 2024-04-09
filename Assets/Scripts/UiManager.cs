@@ -8,7 +8,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] GameObject gameName;
     [SerializeField] GameObject gameOver;
     [SerializeField] GameObject playButton;
-    public void StartGame()
+    public void StartWindow()
     {
         gameName.SetActive(true);
         playButton.SetActive(true);
@@ -24,5 +24,11 @@ public class UiManager : MonoBehaviour
     {
         gameManager.StartGame();
         Default();
+    }
+
+    public void GameOver()
+    {
+        gameOver.SetActive(true);
+        playButton.SetActive(true);
     }
 }
