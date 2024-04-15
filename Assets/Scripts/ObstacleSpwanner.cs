@@ -6,7 +6,7 @@ public class ObstacleSpwanner : MonoBehaviour
 {
     [SerializeField] GameObject pipe;
     [SerializeField] float timeIntervel;
-    private float spawnPosition;
+    private Vector3 spawnPosition;
 
     private float timer;
 
@@ -14,15 +14,7 @@ public class ObstacleSpwanner : MonoBehaviour
     {
         timer = timeIntervel;
     }
-   /* private void Update()
-    {
-        if (Time.time >= timer)
-        {
-            GameObject obstacle = Instantiate(pipe, this.transform.position, Quaternion.identity);
-            Destroy(obstacle, 5);
-            timer += timeIntervel;
-        }
-    }*/
+  
 
     public void GameOver(bool gameOver)
     {
@@ -38,7 +30,8 @@ public class ObstacleSpwanner : MonoBehaviour
 
     private void SpawnPipe()
     {
-        GameObject obstacle = Instantiate(pipe, this.transform.position, Quaternion.identity);
+        spawnPosition = this.transform.position + new Vector3(0, Random.Range(-4,4), 0); 
+        GameObject obstacle = Instantiate(pipe, spawnPosition, Quaternion.identity);
         Destroy(obstacle, 5);
     }
 }
