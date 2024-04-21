@@ -643,7 +643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c9885a15d6324abf6be31573028ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipe: {fileID: 0}
+  pipe: {fileID: 5592019217811564736, guid: ed782cedc12ec6147ab4855a779e8cca, type: 3}
   timeIntervel: 3
 --- !u!1 &728177754
 GameObject:
